@@ -16,13 +16,37 @@ body {
   padding: 10px 30px 10px;
 }
 
+.intro {
+  float: left;
+  padding: 2em;
+}
+
+.keepcalm {
+  float: left;
+  margin-right: 20px;
+}
+
 #header {
-  margin: 5em 0;
+  margin: 5em 0 2em 0;
 }
 
 ul.nav {
   font-family: "Rambla", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
+}
+
+section {
+  margin: 3em 0;
+}
+
+.intro {
+  margin-bottom: 3em;
+}
+
+.intro p {
+  text-align: justify;
+  font-size: 20px;
+  line-height: 150%;
 }
 
 .text {
@@ -31,4 +55,28 @@ ul.nav {
 
 .text p {
  font-size: 16px;
+}
+
+.title {
+  text-align: center;
+}
+
+.thumbnail {
+  text-align: center;
+}
+
+.judge-row {
+  margin: 0 21.4em;
+}
+
+.team-row {
+  margin: 0 21.4em;
+}
+
+.sponsor-row-1 {
+  margin: 0 21.4em;
+}
+
+.sponsor-row-2 {
+  margin: 0 28em;
 }
