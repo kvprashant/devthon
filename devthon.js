@@ -1,4 +1,7 @@
 if (Meteor.isClient) {
+
+  $('#navbar').affix();
+
   Template.hello.greeting = function () {
     return "Welcome to devthon.";
   };
