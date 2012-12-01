@@ -1,6 +1,9 @@
-/* CSS declarations go here */
-
 body {
+  padding-top: 80px;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+button {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -18,7 +21,12 @@ body {
 
 .intro {
   float: left;
-  padding: 2em;
+}
+
+.intro p {
+  text-align: justify;
+  font-size: 28px;
+  line-height: 150%;
 }
 
 .keepcalm {
@@ -26,27 +34,64 @@ body {
   margin-right: 20px;
 }
 
+.hero-unit .intro {
+  text-align: justify;
+}
+
+.hero-unit .action-button {
+  margin-left: 4em;
+}
+
+.action-button {
+  margin-left: 2em;
+}
+
+.action {
+  padding: 20px 0;
+}
+
+.action a {
+  margin: 10px;
+}
+
+.action-box {
+  background-color: white;
+  text-align: center;
+  display: block;
+  padding: 8px 0px;
+  line-height: 20px;
+  border: 5px solid #636363;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.action-item {
+  padding: 5px 0;
+}
+
 #header {
   margin: 5em 0 2em 0;
 }
 
 ul.nav {
-  font-family: "Rambla", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 15px;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13.5px;
 }
 
 section {
-  margin: 3em 0;
+  margin: 4em 0;
 }
 
-.intro {
-  margin-bottom: 3em;
-}
-
-.intro p {
-  text-align: justify;
-  font-size: 20px;
-  line-height: 150%;
+section h2 {
+  padding-bottom: 20px;
 }
 
 .text {
@@ -79,4 +124,39 @@ section {
 
 .sponsor-row-2 {
   margin: 0 28em;
+}
+
+/*Sponsors CSS*/
+.comsoc {
+  padding: 25px 0 0 0;
+}
+
+.modal-body p {
+  text-align: justify;
+}
+
+.modal-body img {
+  float: left;
+  width: 170px;
+  margin-right: 20px;
+}
+
+/*Social CSS*/
+
+a.social-twitter {
+  background: url("/img/twitter-bird-light-bgs.png") no-repeat center center;
+  background-color: #E6E6E6;
+  background-size: 25px;
+}
+
+a.social-round {
+  display: inline-block;
+  border-radius: 40px;
+  width: 30px;
+  height: 30px;
+}
+
+/*Rule CSS*/
+ul.rules-list > li {
+ list-style: none;
 }
