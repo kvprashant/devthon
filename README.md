@@ -1,4 +1,4 @@
-devthon
+Devthon
 =======
 
-Build what you love
+Launchpad for ideas, code contributions and discussions
