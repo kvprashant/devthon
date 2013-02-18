@@ -39,8 +39,14 @@ if (Meteor.isClient) {
   }
 
   Template.jumbotron.ticketText = function() {
-    var ticketText = enableRegistrations ? "Already invited?" : "Invitations and Hack proposals will open soon";
+    var ticketText = enableRegistrations ? "Already invited? " : "Invitations and Hack proposals will open soon. ";
     return ticketText;
+  }
+
+  Template.jumbotron.subscribeHtml = function() {
+    var subscribeHtml = enableRegistrations ? "For updates, <a href='http://eepurl.com/vyCzb' target='_blank'>subscribe</a>" 
+                                         : "Meanwhile, <a href='http://eepurl.com/vyCzb' target='_blank'>subscribe</a> for updates. ";
+    return subscribeHtml;
   }
 
   Template.jumbotron.buttonClass = function() {
@@ -72,10 +78,6 @@ if (Meteor.isClient) {
     return "Copyright © 2013 Devthon.";
   }
 
-  Template.footer.author = function () {
-    return "Hacked by <a href='http://twitter.com/prashantkv'>@prashantkv</a>";
-  }
-  
   Template.navigation.navs = function() {
     return [
             { "text": "Hacks", "link": "http://www.google.com/moderator/#16/e=2052b0" }, 
@@ -147,21 +149,6 @@ if (Meteor.isClient) {
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
-
-  // In your server code: define a method that the client can call
-    Meteor.methods({
-      sendEmail: function (to, from, subject, text) {
-        // Let other method calls from the same client start running,
-        // without waiting for the email sending to complete.
-        this.unblock();
-
-        Email.send({
-          to: to,
-          from: from,
-          subject: subject,
-          text: text
-        });
-      }
-    });
+    // In your server code: define a method that the client can call
   });
 }
