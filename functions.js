@@ -21,6 +21,10 @@ if (Meteor.isClient) {
     return "1st";
   }
 
+  Template.jumbotron.when = function() {
+    return "March 30-31";
+  }
+
   Template.jumbotron.tagline = function() {
     return "Launchpad for ideas, code contributions and discussions";
   }
@@ -58,10 +62,6 @@ if (Meteor.isClient) {
 
   Template.jumbotron.price = function() {
     return "Rs. 1000";
-  }
-
-  Template.dates.when = function() {
-    return "March 30-31";
   }
 
   Template.about.content = function() {
