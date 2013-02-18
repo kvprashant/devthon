@@ -89,18 +89,22 @@ if (Meteor.isClient) {
     return [
        { 
            "name" : "Web Hacks", 
-           "description" : "Hack ideas and discussions related to frameworks like NodeJS, MeteorJS, Python frameworks (Flask, Django), etc",
-           "link" : "http://www.google.com/moderator/#15/e=2052b0&t=2052b0.43"
+           "description" : "Hacks around web frameworks on Python (Django, web2py, etc), \
+                            PHP (Codeigniter, Yii, Drupal, etc), Javascript (Node.js, meteorjs, etc) \
+                            or any other framework you can think of!",
+           "link" : "#"
        },
        {
            "name" : "Mobile Hacks",
-           "description" : "Hack ideas and discussions related to all things Mobile like PhoneGap, Sencha, Android, iOS",
-           "link": "http://www.google.com/moderator/#15/e=2052b0&t=2052b0.42"
+           "description" : "Project ideas and hacks using mobile operating systems like \
+                            Android and iOS or mobile development frameworks like Phonegap, Sencha, Kivy, etc",
+           "link": "#"
        },
        {
            "name" : "Hardware hacks",
-           "description" : "Ideas and discussions related to all things hardware like Leap Motion/Arduino/Raspberry",
-           "link" : "http://www.google.com/moderator/#15/e=2052b0&t=2052b0.41"
+           "description" : "Get involved in awesome hardware hacks using Leap Motion, \
+                            Arduino, Raspberry Pi or any hardware. You can get your own hardware too!",
+           "link" : "#"
        }
      ]
   }
