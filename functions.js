@@ -66,8 +66,9 @@ if (Meteor.isClient) {
 
   Template.about.content = function() {
     return "Devthon is a launchpad for ideas, code contributions and discussions. \
-            Meet curious and tinkering minds and spend a weekend getting a high on new ideas, code and hardware. \
-            This is a developer marathon running on caffeine and <a href='http://en.wikipedia.org/wiki/Vada_pav' target='_blank'>vada pav</a>.";
+            Meet curious and tinkering minds and spend a weekend sparking new product ideas, \
+            open source code contributions and hacking hardware. This is a developer marathon \
+            running on caffeine and <a href='http://en.wikipedia.org/wiki/Vada_pav' target='_blank'>vada pav</a>.";
   }
 
   Template.about.contact = function() {
