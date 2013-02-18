@@ -12,77 +12,171 @@
 
 <body>
 
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="nav-collapse collapse">
+	    {{> navigation }}
+          </div><!--/.nav-collapse -->
+
+          <div class="social-share">
+            <div class="social-button">
+              {{> twitter}}
+            </div>
+          </div><!--/.social-share -->
+        </div>
+      </div>
+    </div>
+
     <div class="container-narrow">
-
-      <div class="jumbotron">
-        <h1>Devthon</h1>
-        <p class="lead">Launchpad for ideas, code contributions and discussions</p>
-        <p class="when">March 9-10</p>
-        <a class="btn btn-large btn-disable">Register</a>
-        <a href="http://www.google.com/moderator/#16/e=2052b0" 
-           class="btn btn-large btn-success">Discuss</a>
-      </div>
-
-      <hr>
-
-      <div class="row-fluid">
-           <ul class="thumbnails">
-              <li class="span4">
-                 <a class="thumbnail" href="http://www.google.com/moderator/#15/e=2052b0&t=2052b0.43">
-                   <div class="discussion">
-                       <h2>Web hacks</h2>
-                   </div>
-                   <div class="description">
-                      <p>Hack ideas and discussions related to frameworks like Drupal, 
-                         NodeJS, MeteorJS, Python frameworks (Flask, Django), etc</p>
-                   </div>
-                 </a>
-               </li>
-
-              <li class="span4">
-                 <a class="thumbnail" href="http://www.google.com/moderator/#15/e=2052b0&t=2052b0.42">
-                   <div class="discussion">
-                       <h2>Mobile hacks</h2>
-                   </div>
-                   <div class="description">
-		       <p>Hack ideas and discussions related to all things 
-			  Mobile like PhoneGap, Sencha, Android, iOS</p>
-                   </div>
-                 </a>
-               </li>
-
-              <li class="span4">
-                 <a class="thumbnail" href="http://www.google.com/moderator/#15/e=2052b0&t=2052b0.41">
-                   <div class="discussion">
-                       <h2>Hardware hacks</h2>
-                   </div>
-                   <div class="description">
-		       <p>Ideas and discussions related to all things 
-                          hardware like Leap Motion/Arduino/Raspberry</p>
-                   </div>
-                 </a>
-               </li>
-           </ul>
-      </div>
-
-      <div class="row-fluid">
-         <iframe height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
-           src="https://maps.google.com/maps?q=17.468417,78.507254&amp;num=1&amp;ie=UTF8&amp;t=m&amp;z=14&amp;ll=17.46823,78.507408&amp;output=embed">
-         </iframe><br />
-         <small>
-           <a href="https://maps.google.com/maps?q=17.468417,78.507254&amp;num=1&amp;ie=UTF8&amp;t=m&amp;z=14&amp;ll=17.46823,78.507408&amp;source=embed" 
-              style="color:#0000FF;text-align:left">View Larger Map</a>
-         </small>
-      </div>
-
-      <div class="footer">
-        <p>Hackspace, Plot 7, Chandragiri Colony, Trimulgherry, Secunderabad – 500 015</p>
-      </div>
-
+      {{> main}}
     </div> <!-- /container -->
 
     {{> setup}}
 </body>
 
+<template name="main">
+
+      {{> jumbotron}}
+      <hr>
+      {{> about}}
+
+      <div class="row-fluid">
+        <div class="info">
+          <p>Meet curious & tinkering minds and spend a weekend sparking new product 
+             ideas, open source code contributions and hacking hardware. This is a developer marathon 
+             running on caffeine and <a href="http://en.wikipedia.org/wiki/Vada_pav">vada pav</a>.
+          </p>
+        </div>
+      </div>
+
+      <div class="row-fluid">
+        {{> discussions}}
+      </div>
+
+      <div class="row-fluid">
+        <h2 class="section-heading">Venue</h2>
+        {{> map}}
+
+      </div>
+
+      {{> footer}}
+
+</template>
+
 <template name="setup"></template>
 
+<template name="dates">
+  <p class="when">{{when}}</p>
+</template>
+
+<template name="trackbox">
+  <li class="span4">
+    <a class="thumbnail" href="{{ link }}">
+      <div class="discussion">
+        <h2>{{ name }}</h2>
+      </div>
+      <div class="description">
+        <p>{{ description }}</p>
+      </div>
+    </a>
+  </li>
+</template>
+
+<template name="jumbotron">
+  <div class="jumbotron">
+    <h1>{{ title }}</h1>
+    <h4>{{ edition }} Edition</h4>
+    <p class="lead">{{ tagline }}</p>
+    {{> dates}}
+    <a href="{{ requestInviteLink }}" data-toggle="modal" 
+       class="btn btn-large {{ buttonClass }} btn-register">
+      <p>{{ requestInviteText }}</p>
+    </a>
+    <a href="#" data-toggle="modal" 
+       class="btn btn-large btn-disable btn-register">
+      <p>Propose Hack</p>
+    </a>
+
+    <div class="invited row-fluid">
+     <p>
+       {{#if isRegistrationOpen }}
+         {{> request}}
+         <a href="{{ ticketLink }}">{{ ticketText }}</a>
+       {{else}}
+         {{ ticketText }}
+       {{/if}}
+     </p>
+     
+    </div>
+  </div>
+</template>
+
+<template name="map">
+ <iframe id="gmaps" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+   src="https://maps.google.com/maps?q=17.451,78.393397&amp;num=1&amp;ie=UTF8&amp;t=m&amp;z=14&amp;ll=17.451312,78.393454&amp;output=embed">
+ </iframe><br />
+ <small>
+ <a href="https://maps.google.com/maps?q=17.451,78.393397&amp;num=1&amp;ie=UTF8&amp;t=m&amp;z=14&amp;ll=17.451312,78.393454&amp;output=embed">
+   View Larger Map
+ </a>
+ </small>
+</template>
+
+<template name="discussions">
+  <ul class="thumbnails">
+    {{#each tracks}}
+      {{> trackbox}}
+    {{/each}}
+  </ul>
+</template>
+
+<template name="twitter">
+  <a href="https://twitter.com/devthon" 
+     class="twitter-follow-button" 
+     data-show-count="false">Follow @devthon</a>
+</template>
+
+<template name="facebook">
+  <div id="fb-root"></div>
+  <div class="fb-like" data-href="http://devthon.org" 
+       data-send="false" data-layout="button_count" 
+       data-width="450" data-show-faces="false" 
+       data-action="recommend">
+  </div>
+</template>
+
+<template name="navigation">
+  <ul class="nav">
+    {{#each navs}}
+      {{> nav}}
+    {{/each}}
+  </ul>
+</template>
+
+<template name="nav">
+  <li><a href="{{ link }}" data-toggle="modal">{{ text }}</a></li>
+</template>
+
+<template name="partners">
+  <div class="section">
+    <ul class="thumbnails">
+      {{#each partners}}
+        {{> partner}}
+      {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="partner">
+  <li class="span5 thumb">
+    <a class="thumbnail partner" href="{{ link }}" target="_blank">
+      <img src="{{ imageUrl }}">
+    </a>
+  </li>
+</template>

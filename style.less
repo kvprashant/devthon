@@ -1,37 +1,104 @@
+/* Definitions and functions */
+@family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+@minion: "Minion Pro";
+/* Mixins */
+.heading {
+  font-family: @minion, @family;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 0;
+}
+.gradient(@begin, @end) {
+  background: @begin; /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover,  @begin 20%, @end 80%); /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,@begin), color-stop(100%,@end)); /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover,  @begin 0%,@end 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover,  @begin 0%,@end 100%); /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover,  @begin 0%,@end 100%); /* IE10+ */
+  background: radial-gradient(ellipse at center,  @begin 0%,@end 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@begin', endColorstr='@end',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.socialized { //mixin
+  float: left;
+  display: block;
+  background-size: 2em;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1.5em 10px;
+  width: 15px;
+  margin-left: 10px;
+}
+
+/* CSS */
 body {
   color: white;
-  padding-top: 80px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  padding-top: 20px;
-  background: #757575; /* Old browsers */
-  background: -moz-radial-gradient(center, ellipse cover,  #757575 20%, #626262 80%); /* FF3.6+ */
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#757575), color-stop(100%,#626262)); /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover,  #757575 0%,#626262 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(center, ellipse cover,  #757575 0%,#626262 100%); /* Opera 12+ */
-  background: -ms-radial-gradient(center, ellipse cover,  #757575 0%,#626262 100%); /* IE10+ */
-  background: radial-gradient(ellipse at center,  #757575 0%,#626262 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#757575', endColorstr='#626262',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+  font-family: @family;
+  .gradient(#102633, #1B1D1F);
 }
 
 /* Custom container */
 .container-narrow {
   margin: 0 auto;
-  max-width: 700px;
+  max-width: 80%;
 
   hr {
     margin: 30px 0;
   }
 }
 
+#about p {
+  font-family: @family;
+  font-size: 13.5px;
+}
+
+/* Social CSS */
+.social-share {
+  float: right;
+  padding-top: 9px;
+
+  .social-button {
+    float: left;
+    margin-left: 10px;
+  }
+}
+
+
+.social-media {
+   text-align: center;
+
+  .social-box a {
+
+    .twitter {
+      background-image: url('/img/twitter-bird-dark-bgs.png');
+      .socialized
+    }
+
+    .fb {
+      background-image: url('/img/f_logo.png');
+      .socialized
+    }
+  }
+}
+
 /* Main marketing message and sign up button */
 .jumbotron {
-  font-family: "Minion Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: 30px 0;
+  font-family: @minion, @family;
   text-align: center;
+  margin-top: 4em;
+
+  .invited p {
+    font-size: 18px;
+  }
 
   h1 {
     font-size: 72px;
     line-height: 1;
+  }
+  
+  a {
+    p {
+      margin: 0;
+    }
   }
 
   p {
@@ -39,7 +106,7 @@ body {
     line-height: 1.1em;
     margin: 15px 4em;
     &.when {
-      font-size: 23px;
+      font-size: 21px;
     }
   }
 
@@ -51,12 +118,30 @@ body {
   }
 
   .btn {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 17px;
-    font-weight: bold;
+    font-family: @minion, @family;
     padding: 12px 22px;
     margin: 0 0.5em;
   }
+
+  .btn-register {
+    background-image: none;
+    border: medium none;
+    border-radius: 3px;
+    color: white;
+    font-size: 28px;
+    margin-bottom: 3px;
+    margin-top: 12px;
+    text-shadow: none;
+    padding: 16px 26px;
+  }
+}
+
+.info p {
+  font-family: @minion, @family;
+  font-size: 22px;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+  text-align: center;
 }
 
 /* Supporting marketing content */
@@ -68,6 +153,32 @@ body {
   }
 }
 
+h3 {
+  font-size: 16px;
+  .heading;
+}
+
+h2 {
+  &.section-heading {
+    font-size: 28px;
+    .heading;
+  }
+}
+
+.section {
+  text-align: center;
+  margin-left: 4.3em;
+
+  ul {
+    &.thumbnails {
+      .thumb {
+        margin: 0 4.3em 2em 0;
+      }
+    }
+  }
+}
+
+
 a {
   &:hover { 
     text-decoration: none;
@@ -75,14 +186,19 @@ a {
  
   &.thumbnail {
     border: 1px solid #DDDDDD; 
-    color: #626262;
-    background-color: #d2d2d2;
+    color: #1B1D1F;
+    background-color: #B2B2B2;
     padding: 10px;
     height: 10em;
 
+    &.partner {
+      background-color: #D2D2D2;
+      border-radius: 16px;
+    }
+
     &:hover { 
       border: 1px solid #DDDDDD; 
-      background-color: #e2e2e2;
+      background-color: #E2E2E2;
     }
 
     .discussion {
@@ -96,13 +212,22 @@ a {
 }
 
 iframe {
-  align: center;
-  border: 1px solid #DDDDDD;
-  padding: 1%;
-  width: 97%;
+  &#gmaps {
+    align: center;
+    border: 1px solid #DDDDDD;
+    padding: 1%;
+    width: 97%;
+  }
 }
 
-.footer {
- font-size: 12px;
+.modal {
+  color: black;
+}
+
+#footer {
  text-align: center;
+
+ p {
+   font-size: 12px;
+ }
 }
