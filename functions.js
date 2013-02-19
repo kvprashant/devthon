@@ -18,7 +18,7 @@ if (Meteor.isClient) {
   }
 
   Template.jumbotron.edition = function() {
-    return "1st";
+    return "version 0.1d";
   }
 
   Template.jumbotron.when = function() {
