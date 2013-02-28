@@ -43,7 +43,6 @@
 <template name="main">
 
       {{> jumbotron}}
-      <hr>
       {{> about}}
 
       <div class="row-fluid">
@@ -83,14 +82,14 @@
 <template name="jumbotron">
   <div class="jumbotron">
     <h1>{{ title }}</h1>
-    <h4>{{ edition }} : {{ when }}</h4>
+    <h4>{{ when }}</h4>
     <p class="lead">{{ tagline }}</p>
     <a href="{{ requestInviteLink }}" data-toggle="modal" 
        class="btn btn-large {{ buttonClass }} btn-register">
       <p>{{ requestInviteText }}</p>
     </a>
-    <a href="#" data-toggle="modal" 
-       class="btn btn-large btn-disable btn-register">
+    <a href="http://proposals.devthon.org" target="_blank" data-toggle="modal" 
+       class="btn btn-large btn-success btn-register">
       <p>Propose Hack</p>
     </a>
 
@@ -154,7 +153,7 @@
 </template>
 
 <template name="nav">
-  <li><a href="{{ link }}" data-toggle="modal">{{ text }}</a></li>
+  <li><a href="{{ link }}" target="_blank" data-toggle="modal">{{ text }}</a></li>
 </template>
 
 <template name="partners">

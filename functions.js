@@ -7,18 +7,18 @@ if (Meteor.isClient) {
 
   var partnersDir = "/partners/";
   var email = "kv.prshnt@gmail.com";
-  var curator = "Prashant";
+  var curator = "us";
 
   // Default definitions. No need to change unless css is changed
   var registerEnableClass = "btn-warning";
   var registerDisableClass = "btn-disable";
 
   Template.jumbotron.title = function() {
-    return "Devthon";
+    return "Devthon 0.1d";
   }
 
   Template.jumbotron.edition = function() {
-    return "version 0.1d";
+    return "";
   }
 
   Template.jumbotron.when = function() {
@@ -30,7 +30,7 @@ if (Meteor.isClient) {
   }
 
   Template.jumbotron.requestInviteText = function() {
-    return "Request Invite";
+    return "Register";
   }
 
   Template.jumbotron.requestInviteLink = function() {
@@ -43,13 +43,14 @@ if (Meteor.isClient) {
   }
 
   Template.jumbotron.ticketText = function() {
-    var ticketText = enableRegistrations ? "Already invited? " : "Invitations and Hack proposals will open soon. ";
+    var ticketText = enableRegistrations ? "Already registered? " : "Registrations will open soon. ";
     return ticketText;
   }
 
   Template.jumbotron.subscribeHtml = function() {
     var subscribeHtml = enableRegistrations ? "For updates, <a href='http://eepurl.com/vyCzb' target='_blank'>subscribe</a>" 
-                                         : "Meanwhile, <a href='http://eepurl.com/vyCzb' target='_blank'>subscribe</a> for updates. ";
+                                         : "Meanwhile, <a href='http://eepurl.com/vyCzb' target='_blank'>subscribe</a> for updates or \
+					 <a href='http://proposals.devthon.org' target='_blank'>propose a hack</a>.";
     return subscribeHtml;
   }
 
@@ -65,10 +66,18 @@ if (Meteor.isClient) {
   }
 
   Template.about.content = function() {
-    return "Devthon is a launchpad for ideas, code contributions and discussions. \
-            Meet curious and tinkering minds and spend a weekend sparking new product ideas, \
-            open source code contributions and hacking hardware. This is a developer marathon \
-            running on caffeine and <a href='http://en.wikipedia.org/wiki/Vada_pav' target='_blank'>vada pav</a>.";
+    return "Launchpad for ideas, code contributions and discussions.Meet curious \
+	    and tinkering minds and spend a weekend sparking new product ideas, \
+	    Opensource code contributions or hacking hardware. You could even hack \
+	    on furniture or food too.";
+  }
+
+  Template.about.mission = function() {
+    return "We believe in the true blue 'hacking culture' of doing it because you \
+	    love it. There are too many hackathons focusing on contests, hiring events \
+	    or startups but none on hacking because its 'fun'. At the heart of all \
+	    innovation is the culture of hacking and exploration. We want to \
+	    encourage this culture through Devthon."
   }
 
   Template.about.contact = function() {
@@ -81,8 +90,9 @@ if (Meteor.isClient) {
 
   Template.navigation.navs = function() {
     return [
-            { "text": "Hacks", "link": "http://www.google.com/moderator/#16/e=2052b0" }, 
-	    { "text": "About", "link": "#about" }
+            { "text": "Proposals", "link": "http://proposals.devthon.org" }, 
+	    { "text": "About", "link": "#about" },
+	    { "text": "Blog", "link": "http://blog.devthon.org" },
 	   ]
   }
 
