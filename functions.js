@@ -106,7 +106,7 @@ if (Meteor.isClient) {
     return [
        { 
            "name" : "Web Hacks", 
-           "description" : "Hacks around web frameworks on Python (Django, web2py, etc), \
+           "description" : "Hacks around web using HTML5 or Python (Django, web2py, etc), \
                             PHP (Codeigniter, Yii, Drupal, etc), Javascript (Node.js, meteorjs, etc) \
                             or any other framework you can think of!",
            "link" : "#"
@@ -114,7 +114,8 @@ if (Meteor.isClient) {
        {
            "name" : "Mobile Hacks",
            "description" : "Project ideas and hacks using mobile operating systems like \
-                            Android and iOS or mobile development frameworks like Phonegap, Sencha, Kivy, etc",
+                            Android, iOS or the newest Firefox OS and mobile development frameworks \
+                            like Phonegap, Sencha, Kivy, etc",
            "link": "#"
        },
        {
