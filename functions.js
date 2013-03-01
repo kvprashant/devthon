@@ -81,7 +81,7 @@ if (Meteor.isClient) {
   }
 
   Template.about.contact = function() {
-    return "Mail <a href='mailto:" + email + "'>" + curator + "</a> if you are interested in participating.";
+    return "Mail <a href='mailto:" + email + "'>" + curator + "</a> if you are interested in volunteering.";
   }
 
   Template.footer.copyright = function() {
