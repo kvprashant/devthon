@@ -96,6 +96,12 @@ if (Meteor.isClient) {
 	   ]
   }
 
+  Template.discussions.events({
+    'click a.thumbnail': function(event) {
+      event.preventDefault();
+    }
+  });
+
   Template.discussions.tracks = function() {
     return [
        { 
