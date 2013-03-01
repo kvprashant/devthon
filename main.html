@@ -96,8 +96,8 @@
     <div class="invited row-fluid">
      <p>
        {{#if isRegistrationOpen }}
-         {{> request}}
-         <a href="{{ ticketLink }}">{{ ticketText }}</a>
+         {{> register}}
+         {{ ticketText }}
        {{else}}
          {{ ticketText }}
        {{/if}}

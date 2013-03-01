@@ -2,8 +2,8 @@ if (Meteor.isClient) {
 
   $('#navbar').affix();
 
-  var enableRegistrations = false; // Do you want to enable registrations?
-  var eventLink = "http://doattend.com"; // Your event link goes here
+  var enableRegistrations = true; // Do you want to enable registrations?
+  var eventLink = "#register"; // Your event link goes here
 
   var partnersDir = "/partners/";
   var email = "kv.prshnt@gmail.com";
@@ -34,7 +34,7 @@ if (Meteor.isClient) {
   }
 
   Template.jumbotron.requestInviteLink = function() {
-    return "#request";
+    return "#register";
   }
 
   Template.jumbotron.ticketLink = function() {
