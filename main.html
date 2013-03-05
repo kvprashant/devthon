@@ -51,6 +51,20 @@
       </div>
 
       <div class="row-fluid">
+        <div class="span6">
+          <h2 class="section-heading">Event Sponsor</h2>
+          {{> sponsors}}
+        </div>
+        <div class="span6">
+          <h2 class="section-heading">Venue Partner</h2>
+          {{> partners}}
+        </div>
+      </div>
+
+      <div class="row-fluid">
+      </div>
+
+      <div class="row-fluid">
         <h2 class="section-heading">Venue</h2>
 	<h3>
 		Hackspace, 3rd floor, Beside Electric Substation,
@@ -161,15 +175,29 @@
   <div class="section">
     <ul class="thumbnails">
       {{#each partners}}
-        {{> partner}}
+      <li class="span10 thumb">
+        <a class="thumbnail partner {{ style }}" href="{{ link }}" target="_blank">
+          <img src="{{ imageUrl }}">
+        </a>
+      </li>
       {{/each}}
     </ul>
   </div>
 </template>
 
-<template name="partner">
-  <li class="span5 thumb">
-    <a class="thumbnail partner" href="{{ link }}" target="_blank">
+<template name="sponsors">
+  <div id="inner" class="section">
+    <ul class="thumbnails">
+      {{#each sponsors}}
+        {{> sponsor }}
+      {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="sponsor">
+  <li class="span10 thumb">
+    <a class="thumbnail sponsor {{ style }}" href="{{ link }}" target="_blank">
       <img src="{{ imageUrl }}">
     </a>
   </li>

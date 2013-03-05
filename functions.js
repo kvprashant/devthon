@@ -5,7 +5,6 @@ if (Meteor.isClient) {
   var enableRegistrations = true; // Do you want to enable registrations?
   var eventLink = "#register"; // Your event link goes here
 
-  var partnersDir = "/partners/";
   var email = "kv.prshnt@gmail.com";
   var curator = "us";
 
@@ -165,6 +164,18 @@ if (Meteor.isClient) {
              js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=450411951699240";
              fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
+  }
+
+  Template.sponsors.sponsors = function() {
+    return [
+             { link: "http://cloudpact.com", imageUrl: "/sponsors/_cloudpact.png", style: "cloudpact" }
+    ]
+  }
+
+  Template.partners.partners = function() {
+    return [
+             { link: "http://azrisolutions.com", imageUrl: "/partners/azri.png", type: "Venue", style: "azri" }
+    ]
   }
 
 }
