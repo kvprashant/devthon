@@ -65,18 +65,16 @@ if (Meteor.isClient) {
   }
 
   Template.about.content = function() {
-    return "Launchpad for ideas, code contributions and discussions.Meet curious \
-	    and tinkering minds and spend a weekend sparking new product ideas, \
-	    Opensource code contributions or hacking hardware. You could even hack \
-	    on furniture or food too.";
+    return "Meet curious and tinkering minds and spend a weekend sparking new product ideas, \
+	    open source code contributions or hacking hardware. You could even hack \
+	    on furniture or food too. We want to encourage this culture through Devthon."
   }
 
   Template.about.mission = function() {
     return "We believe in the true blue 'hacking culture' of doing it because you \
 	    love it. There are too many hackathons focusing on contests, hiring events \
 	    or startups but none on hacking because its 'fun'. At the heart of all \
-	    innovation is the culture of hacking and exploration. We want to \
-	    encourage this culture through Devthon."
+	    innovation is the culture of hacking and exploration."
   }
 
   Template.about.contact = function() {
@@ -90,7 +88,6 @@ if (Meteor.isClient) {
   Template.navigation.navs = function() {
     return [
             { "text": "Proposals", "link": "http://proposals.devthon.org" }, 
-	    { "text": "About", "link": "#about" },
 	    { "text": "Blog", "link": "http://blog.devthon.org" },
 	   ]
   }
@@ -168,13 +165,13 @@ if (Meteor.isClient) {
 
   Template.sponsors.sponsors = function() {
     return [
-             { link: "http://cloudpact.com", imageUrl: "/sponsors/_cloudpact.png", style: "cloudpact" }
+             { link: "http://mowbly.com", imageUrl: "/sponsors/_mowbly.png", style: "cloudpact" },
+             { link: "http://azrisolutions.com", imageUrl: "/partners/azri.png", style: "azri" }
     ]
   }
 
   Template.partners.partners = function() {
     return [
-             { link: "http://azrisolutions.com", imageUrl: "/partners/azri.png", type: "Venue", style: "azri" }
     ]
   }
 

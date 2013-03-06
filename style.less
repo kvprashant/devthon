@@ -6,7 +6,7 @@
   font-family: @minion, @family;
   font-weight: 500;
   text-align: center;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 .gradient(@begin, @end) {
   background: @begin; /* Old browsers */
@@ -29,6 +29,10 @@
   margin-left: 10px;
 }
 
+.row-fluid {
+  margin-bottom: 20px;
+}
+
 /* CSS */
 body {
   color: white;
@@ -46,9 +50,11 @@ body {
   }
 }
 
-#about p {
-  font-family: @family;
-  font-size: 13.5px;
+.about p {
+  font-family: @minion, @family;
+  font-size: 19.5px;
+  text-align: justify;
+  line-height: 1.7em;
 }
 
 /* Social CSS */
@@ -162,7 +168,7 @@ body {
 }
 
 .tracks {
-  margin: 3em 0;
+  margin-top: 1em;
 }
 
 /* Supporting marketing content */
@@ -182,7 +188,7 @@ h3 {
 
 h2 {
   &.section-heading {
-    font-size: 28px;
+    font-size: 32px;
     .heading;
   }
 }
@@ -200,6 +206,7 @@ h2 {
 
         &.thumb {
           max-height: 150px;
+          margin: 2em 5em;
         }
       }
     }
@@ -209,6 +216,7 @@ h2 {
 .box {
   border-radius: 16px;
   background-color: #DDDDDD;
+  padding-top: 20px;
 
   &:hover {
     background-color: #EEEEEE;
@@ -239,21 +247,16 @@ a {
       border: 1px solid #DDDDDD; 
     }
 
-    &.partner {
-      .box;
-
-      &.azri img {
-        max-height: 125px;
-      };
-    }
-
     &.sponsor {
       .box;
 
       &.cloudpact img {
-        padding-top: 15px;
         max-height: 110px;
       }
+
+      &.azri img {
+        max-height: 120px;
+      };
     }
 
     .discussion {
