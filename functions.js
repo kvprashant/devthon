@@ -207,12 +207,6 @@ if (Meteor.isClient) {
              { link: "http://azrisolutions.com", imageUrl: "/partners/azri.png", style: "azri" }
     ]
   }
-
-  Template.partners.partners = function() {
-    return [
-    ]
-  }
-
 }
 
 if (Meteor.isServer) {

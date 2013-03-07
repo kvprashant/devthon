@@ -192,27 +192,3 @@
     </a>
   </li>
 </template>
-
-
-<template name="actions">
-    <a href="{{ requestInviteLink }}" data-toggle="modal" 
-       class="btn btn-large {{ buttonClass }} btn-register">
-      <p>{{ requestInviteText }}</p>
-    </a>
-    <a href="{{ proposalLink }}" target="_blank" data-toggle="modal" 
-       class="btn btn-large btn-success btn-register">
-      <p>{{ proposeText }}</p>
-    </a>
-
-    <div class="invited">
-     <p>
-       {{#if isRegistrationOpen }}
-         {{> register}}
-         {{ ticketText }}
-       {{else}}
-         {{ ticketText }}
-       {{/if}}
-       {{{ subscribeHtml }}}
-     </p>
-    </div>
-</template>
