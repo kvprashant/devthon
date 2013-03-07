@@ -1,12 +1,13 @@
 /* Definitions and functions */
 @family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-@minion: "Minion Pro";
+@font1: "Montaga";
+@font2: "Sintony";
 /* Mixins */
 .heading {
-  font-family: @minion, @family;
+  font-family: @font1, @family;
   font-weight: 500;
   text-align: center;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 .gradient(@begin, @end) {
   background: @begin; /* Old browsers */
@@ -35,9 +36,9 @@
 
 /* CSS */
 body {
-  color: white;
+  color: #1C1C1C;
   font-family: @family;
-  .gradient(#102633, #1B1D1F);
+  background-image: url('pw_maze_white.png');
 }
 
 /* Custom container */
@@ -50,11 +51,45 @@ body {
   }
 }
 
-.about p {
-  font-family: @minion, @family;
-  font-size: 19.5px;
-  text-align: justify;
-  line-height: 1.7em;
+.navbar-inner {
+  background-image: url('cloth_alike.png');
+}
+
+.nav {
+  li {
+    a {
+      font-family: @font2, @family;
+      text-transform: uppercase;
+      font-size: 10.5px;
+      margin: 2px;
+      padding: 5px;
+    }
+
+    a:hover {
+      color: #F0F0F0;
+    }
+  }
+}
+
+.about {
+
+  display: block;
+  margin: 0 4%;
+
+  p {
+    font-family: @font1, @family;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.7em;
+  }
+}
+
+.content {
+  font-family: @font1, @family;
+  font-size: 18px;
+  text-align: center;
+  line-height: 1.3em;
+  margin: 0 20%;
 }
 
 /* Social CSS */
@@ -91,31 +126,22 @@ body {
   margin-left: -380px;
 }
 
+.space {
+  margin: 0 0 22px 0;
+}
+
 /* Main marketing message and sign up button */
 .jumbotron {
-  
-  .space {
-    margin: 22px 0;
-  }
 
-  font-family: @minion, @family;
+  font-family: @font1, @family;
   text-align: center;
   margin-top: 4em;
 
-  .invited p {
-    font-size: 18px;
-  }
-
   h1 {
-    font-size: 72px;
+    font-size: 42px;
     line-height: 1;
+    letter-spacing: -4px;
     .space;
-  }
-
-  h4 {
-    font-weight: 500;
-    font-size: 28px;
-    .space
   }
 
   a {
@@ -125,12 +151,28 @@ body {
   }
 
   p {
-    font-size: 32px;
+    font-size: 28px;
     line-height: 1.1em;
-    margin: 1em 4em;
     &.when {
       font-size: 21px;
     }
+  }
+}
+
+.actionables {
+  font-family: @font1, @family;
+  margin: 0 auto;
+  text-align: center;
+
+  h4 {
+    font-weight: 500;
+    font-size: 18px;
+    .space
+  }
+
+  p {
+    font-size: 18px;
+    margin: 5px;
   }
 
   .btn-disable {
@@ -141,7 +183,7 @@ body {
   }
 
   .btn {
-    font-family: @minion, @family;
+    font-family: @font1, @family;
     padding: 12px 22px;
     margin: 0 0.5em;
   }
@@ -151,16 +193,19 @@ body {
     border: medium none;
     border-radius: 3px;
     color: white;
-    font-size: 28px;
+    font-size: 22px;
     margin-bottom: 12px;
-    margin-top: 12px;
     text-shadow: none;
-    padding: 16px 26px;
+    padding: 8px 16px;
+  }
+
+  .invited p {
+    font-size: 14px;
   }
 }
 
 .info p {
-  font-family: @minion, @family;
+  font-family: @font1, @family;
   font-size: 22px;
   line-height: 1.5em;
   margin-bottom: 1.5em;
@@ -168,7 +213,9 @@ body {
 }
 
 .tracks {
+  font-family: @font1, @family;
   margin-top: 1em;
+  font-size: 14.5px;
 }
 
 /* Supporting marketing content */
@@ -190,6 +237,11 @@ h2 {
   &.section-heading {
     font-size: 32px;
     .heading;
+
+    &.sponsors {
+      margin-bottom: 20px;
+    }
+
   }
 }
 
@@ -205,8 +257,7 @@ h2 {
         float: none;
 
         &.thumb {
-          max-height: 150px;
-          margin: 2em 5em;
+          max-height: 200px;
         }
       }
     }
@@ -216,11 +267,35 @@ h2 {
 .box {
   border-radius: 16px;
   background-color: #DDDDDD;
-  padding-top: 20px;
+  padding: 10px;
 
   &:hover {
     background-color: #EEEEEE;
     cursor: pointer;
+  }
+}
+
+#about {
+  .modal-body {
+    text-align: justify;
+  }
+
+  .team {
+    margin: 0 auto;
+    max-width: 75%;
+    padding-top: 20px;
+  }
+}
+
+.person {
+  text-align: center;
+
+  img {
+    height: 150px;
+  }
+
+  .twitter-follow-button {
+    padding: 5px 0 0 0;
   }
 }
 
@@ -237,10 +312,13 @@ a {
     float: left
     border: 1px solid #DDDDDD; 
     color: #1B1D1F;
-    background-color: #B2B2B2;
+    background-color: #F8F8F8;
     padding: 10px;
-    min-height: 130px;
-    max-height: 150px;
+    line-height: 24px;
+
+    &.track {
+      min-height: 150px;
+    }
 
     &:hover { 
       cursor: default;
@@ -250,20 +328,17 @@ a {
     &.sponsor {
       .box;
 
-      &.cloudpact img {
-        max-height: 110px;
+      img {
+        height: 100px;
+        padding: 20px 0;
       }
-
-      &.azri img {
-        max-height: 120px;
-      };
     }
 
     .discussion {
       h2 {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: @font1, @family;
         line-height: 1em;
-        font-size: 20px;
+        font-size: 19px;
       }
     }
   }
@@ -283,7 +358,7 @@ iframe {
 }
 
 .modal-heading {
-  font-family: @minion, @family;
+  font-family: @font1, @family;
   font-size: 24px;
 }
 

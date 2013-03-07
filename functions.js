@@ -20,49 +20,57 @@ if (Meteor.isClient) {
     return "";
   }
 
-  Template.jumbotron.when = function() {
-    return "March 30-31";
-  }
-
   Template.jumbotron.tagline = function() {
     return "Launchpad for ideas, code contributions and discussions";
   }
 
-  Template.jumbotron.requestInviteText = function() {
+  Template.actions.where = function() {
+    return "Hyderabad";
+  }
+
+  Template.actions.when = function() {
+    return "March 30-31";
+  }
+
+  Template.actions.requestInviteText = function() {
     return "Register";
   }
 
-  Template.jumbotron.requestInviteLink = function() {
+  Template.actions.requestInviteLink = function() {
     return "#register";
   }
 
-  Template.jumbotron.ticketLink = function() {
+  Template.actions.proposalText = function() {
+    return "Propose Hack";
+  }
+
+  Template.actions.proposalLink = function() {
+    return "http://proposals.devthon.org";
+  }
+
+  Template.actions.ticketLink = function() {
     var ticketLink = enableRegistrations ? eventLink : "";
     return ticketLink;
   }
 
-  Template.jumbotron.ticketText = function() {
+  Template.actions.ticketText = function() {
     var ticketText = enableRegistrations ? "Already registered? " : "Registrations will open soon. ";
     return ticketText;
   }
 
-  Template.jumbotron.subscribeHtml = function() {
+  Template.actions.subscribeHtml = function() {
     var subscribeHtml = enableRegistrations ? "For updates, <a href='http://eepurl.com/vyCzb' target='_blank'>subscribe</a>" 
                                          : "Meanwhile, <a href='http://eepurl.com/vyCzb' target='_blank'>subscribe</a> for updates or \
 					 <a href='http://proposals.devthon.org' target='_blank'>propose a hack</a>.";
     return subscribeHtml;
   }
 
-  Template.jumbotron.buttonClass = function() {
+  Template.actions.buttonClass = function() {
     var buttonClass = enableRegistrations ? registerEnableClass : registerDisableClass;
     return buttonClass;
   }
 
-  Template.jumbotron.isRegistrationOpen = enableRegistrations;
-
-  Template.jumbotron.price = function() {
-    return "Rs. 1000";
-  }
+  Template.actions.isRegistrationOpen = enableRegistrations;
 
   Template.about.content = function() {
     return "Meet curious and tinkering minds and spend a weekend sparking new product ideas, \
@@ -81,6 +89,11 @@ if (Meteor.isClient) {
     return "Mail <a href='mailto:" + email + "'>" + curator + "</a> if you are interested in volunteering.";
   }
 
+  Template.details.content = function() {
+    return "Meet curious and tinkering minds and spend a weekend sparking new product ideas, \
+	    open source code contributions or hacking hardware.";
+  }
+
   Template.footer.copyright = function() {
     return "Copyright © 2013 Devthon.";
   }
@@ -88,6 +101,7 @@ if (Meteor.isClient) {
   Template.navigation.navs = function() {
     return [
             { "text": "Proposals", "link": "http://proposals.devthon.org" }, 
+            { "text": "About", "link": "#about" }, 
 	    { "text": "Blog", "link": "http://blog.devthon.org" },
 	   ]
   }
@@ -142,6 +156,30 @@ if (Meteor.isClient) {
   };
 
   Template.twitter.created = function() {
+    return !function(d,s,id) {
+             var js,fjs = d.getElementsByTagName(s)[0];
+             if(!d.getElementById(id)){
+               js=d.createElement(s);
+               js.id=id;
+               js.src="//platform.twitter.com/widgets.js";
+               fjs.parentNode.insertBefore(js,fjs);
+             }
+     }(document,"script","twitter-wjs");
+  }
+
+  Template.prashant.created = function() {
+    return !function(d,s,id) {
+             var js,fjs = d.getElementsByTagName(s)[0];
+             if(!d.getElementById(id)){
+               js=d.createElement(s);
+               js.id=id;
+               js.src="//platform.twitter.com/widgets.js";
+               fjs.parentNode.insertBefore(js,fjs);
+             }
+     }(document,"script","twitter-wjs");
+  }
+
+  Template.harish.created = function() {
     return !function(d,s,id) {
              var js,fjs = d.getElementsByTagName(s)[0];
              if(!d.getElementById(id)){
