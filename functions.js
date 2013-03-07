@@ -167,7 +167,7 @@ if (Meteor.isClient) {
      }(document,"script","twitter-wjs");
   }
 
-  Template.prashant.created = function() {
+  Template.prashant.rendered = function() {
     return !function(d,s,id) {
              var js,fjs = d.getElementsByTagName(s)[0];
              if(!d.getElementById(id)){
@@ -179,7 +179,7 @@ if (Meteor.isClient) {
      }(document,"script","twitter-wjs");
   }
 
-  Template.harish.created = function() {
+  Template.harish.rendered = function() {
     return !function(d,s,id) {
              var js,fjs = d.getElementsByTagName(s)[0];
              if(!d.getElementById(id)){
@@ -204,7 +204,7 @@ if (Meteor.isClient) {
   Template.sponsors.sponsors = function() {
     return [
              { link: "http://mowbly.com", imageUrl: "/sponsors/_mowbly.png", style: "cloudpact" },
-             { link: "http://azrisolutions.com", imageUrl: "/partners/azri.png", style: "azri" }
+             { link: "http://azrisolutions.com", imageUrl: "/sponsors/azri.png", style: "azri" },
     ]
   }
 }

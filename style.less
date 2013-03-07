@@ -53,23 +53,34 @@ body {
 }
 
 .navbar-inner {
-  background-image: url('cloth_alike.png');
+  background-image: url('debut_dark.png');
 }
 
-.nav {
+.navbar {
+ .nav {
   li {
     a {
       font-family: @font2, @family;
       text-transform: uppercase;
       font-size: 10.5px;
-      margin: 2px;
+      margin: 5px 10px;
       padding: 5px;
-    }
+      color: #E6E6E6;
+      text-shadow: 0 1px 0 #3F3F3F;
 
-    a:hover {
-      color: #F0F0F0;
+      &:hover {
+        color: #FFFFFF;
+        text-shadow: 0 1px 0 #808080;
+      }
+
+      &:focus {
+        color: #FFFFFF;
+        text-shadow: 0 1px 0 #808080;
+      }
+
     }
   }
+ }
 }
 
 .about {
@@ -141,7 +152,7 @@ body {
   h1 {
     font-size: 42px;
     line-height: 1;
-    letter-spacing: -4px;
+    letter-spacing: -1px;
     .space;
   }
 
@@ -265,17 +276,6 @@ h2 {
   }
 }
 
-.box {
-  border-radius: 16px;
-  background-color: #DDDDDD;
-  padding: 10px;
-
-  &:hover {
-    background-color: #EEEEEE;
-    cursor: pointer;
-  }
-}
-
 #about {
   .modal-body {
     text-align: justify;
@@ -292,11 +292,22 @@ h2 {
   text-align: center;
 
   img {
-    height: 150px;
+    height: 180px;
   }
 
   .twitter-follow-button {
     padding: 5px 0 0 0;
+  }
+}
+
+.box {
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  padding: 10px;
+
+  &:hover {
+    background-color: #EEEEEE;
+    cursor: pointer;
   }
 }
 
@@ -330,7 +341,7 @@ a {
       .box;
 
       img {
-        height: 100px;
+        max-height: 95px;
         padding: 20px 0;
       }
     }
