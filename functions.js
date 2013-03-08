@@ -204,7 +204,7 @@ if (Meteor.isClient) {
   Template.sponsors.sponsors = function() {
     return [
              { link: "http://mowbly.com", imageUrl: "/sponsors/_mowbly.png", style: "cloudpact" },
-             { link: "http://mozilla.com", imageUrl: "/sponsors/mozilla_wordmark.png", style: "mozilla" },
+             { link: "http://mozilla.org", imageUrl: "/sponsors/mozilla_wordmark.png", style: "mozilla" },
              { link: "http://azrisolutions.com", imageUrl: "/sponsors/azri.png", style: "azri" },
              { link: "http://handsmedia.in", imageUrl: "/sponsors/hands.png", style: "hands" },
     ]
