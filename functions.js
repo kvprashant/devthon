@@ -244,7 +244,7 @@ if (Meteor.isClient) {
     return [
              { name: "Prajwala Manchikatla", imageUrl: "/hackers/prajwala.jpg", handle: "prajwala" },
              { name: "Kashyap KMBC", imageUrl: "/hackers/kgrz.jpg", handle: "kgrz" },
-             { name: "Charan Puvvala", imageUrl: "/hackers/charan.jpg", handle: "f41kr" },
+             { name: "Charan Puvvala", imageUrl: "/hackers/charan.jpg", handle: "f4k1r" },
              { name: "Ravi Teja", imageUrl: "/hackers/ravi.jpg", handle: "ravitheboss" },
     ]
   }
