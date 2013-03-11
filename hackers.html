@@ -1,0 +1,18 @@
+<template name="hackers">
+  <div class="section hackers">
+    <ul class="thumbnails">
+      {{#each hackers}}
+        {{> hacker }}
+      {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="hacker">
+  <li class="span2 hacker pull-left">
+   <a href="http://twitter.com/{{ handle }}" target="_blank" class="thumbnail">
+    <img src="{{ imageUrl }}" alt="">
+    <p>{{ name }}</p>
+   </a>
+  </li>
+</template>

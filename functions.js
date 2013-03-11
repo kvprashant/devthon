@@ -12,6 +12,32 @@ if (Meteor.isClient) {
   var registerEnableClass = "btn-warning";
   var registerDisableClass = "btn-disable";
 
+  function resetHeight(group) {
+    group.each(function() { $(this).height(0); });
+  }
+
+  function equalResetHeight(group) {
+    tallest = 0;
+    group.each(function() {
+        thisHeight = $(this).height();       
+        if(thisHeight > tallest) {
+            tallest = thisHeight;       
+        }    
+    });
+    group.each(function() { $(this).height(tallest); });
+  } 
+
+  function equalHeight(group) {
+    tallest = 0;
+    group.each(function() {
+        thisHeight = $(this).height();       
+        if(thisHeight > tallest) {
+            tallest = thisHeight;       
+        }    
+    });
+    group.each(function() { $(this).height(tallest); });
+  } 
+
   Template.jumbotron.title = function() {
     return "Devthon 0.1d";
   }
@@ -101,13 +127,17 @@ if (Meteor.isClient) {
   Template.navigation.navs = function() {
     return [
             { "text": "Proposals", "link": "http://proposals.devthon.org" }, 
-            { "text": "About", "link": "#about" }, 
-	    { "text": "Blog", "link": "http://blog.devthon.org" },
+            { "text": "About", "link": "#about", modal: true }, 
+            { "text": "Hackers", "link": "#hackers" }, 
+            { "text": "Schedule", "link": "#schedule" }, 
+            { "text": "Sponsors", "link": "#sponsors" }, 
+            { "text": "Venue", "link": "#venue" }, 
+	    { "text": "Blog", "link": "http://blog.devthon.org", blank: true },
 	   ]
   }
 
   Template.discussions.events({
-    'click a.thumbnail': function(event) {
+    'click a.track': function(event) {
       event.preventDefault();
     }
   });
@@ -116,9 +146,9 @@ if (Meteor.isClient) {
     return [
        { 
            "name" : "Web Hacks", 
-           "description" : "Hacks around web using HTML5 or Python (Django, web2py, etc), \
+           "description" : "Hack around web using HTML5 or Python (Django, web2py, etc), \
                             PHP (Codeigniter, Yii, Drupal, etc), Javascript (Node.js, meteorjs, etc) \
-                            or any other framework you can think of!",
+                            or any other framework!",
            "link" : "#"
        },
        {
@@ -209,6 +239,24 @@ if (Meteor.isClient) {
              { link: "http://handsmedia.in", imageUrl: "/sponsors/hands.png", style: "hands" },
     ]
   }
+
+  Template.hackers.hackers = function() {
+    return [
+             { name: "Prajwala Manchikatla", imageUrl: "/hackers/prajwala.jpg", handle: "prajwala" },
+             { name: "Kashyap KMBC", imageUrl: "/hackers/kgrz.jpg", handle: "kgrz" },
+             { name: "Charan Puvvala", imageUrl: "/hackers/charan.jpg", handle: "f41kr" },
+             { name: "Ravi Teja", imageUrl: "/hackers/ravi.jpg", handle: "ravitheboss" },
+    ]
+  }
+
+  Template.discussions.rendered = function() {
+    equalResetHeight($(".thumbnail.track"));
+  }
+
+  $(window).resize(function() {
+    equalResetHeight($(".thumbnails li"));
+  });
+
 }
 
 if (Meteor.isServer) {

@@ -1,0 +1,21 @@
+<template name="venue">
+  <div class="spaces">
+    <ul class="thumbnails">
+      {{#each spaces}}
+        {{> space}}
+      {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="space">
+  <li class="span4">
+    <a class="thumbnail space pull-left" href="#">
+      <div class="space pull-left">
+        <h3>{{ name }}</h3>
+        <h4>{{ provision }}</h4>
+        <p>{{ description }}</p>
+      </div>
+    </a>
+  </li>
+</template>
