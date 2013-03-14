@@ -135,13 +135,15 @@
 </template>
 
 <template name="discussions">
-  <div id="hacks" class="tracks">
+  <div id="hacks" class="row">
     <h2 class="section-heading">Proposals</h2>
-    <ul class="thumbnails">
-      {{#each tracks}}
-        {{> trackbox}}
-      {{/each}}
-    </ul>
+    <div class="section tracks">
+      <ul class="thumbnails">
+        {{#each tracks}}
+          {{> trackbox}}
+        {{/each}}
+      </ul>
+    </div>
   </div>
 </template>
 
