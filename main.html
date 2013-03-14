@@ -54,9 +54,7 @@
         {{> actions}}
       </div>
 
-      <div class="row-fluid">
-        {{> discussions}}
-      </div>
+      {{> discussions}}
 
       <div id="hackers" class="row">
         <h2 class="section-heading">Hackers</h2>
@@ -138,6 +136,7 @@
 
 <template name="discussions">
   <div id="hacks" class="tracks">
+    <h2 class="section-heading">Proposals</h2>
     <ul class="thumbnails">
       {{#each tracks}}
         {{> trackbox}}
@@ -147,13 +146,11 @@
 </template>
 
 <template name="trackbox">
-  <li class="span4 pull-left">
-    <a class="thumbnail track pull-left" href="{{ link }}">
-      <div class="discussion">
-        <h2>{{ name }}</h2>
-      </div>
-      <div class="description">
-        <p>{{ description }}</p>
+  <li class="span5 pull-left">
+    <a class="thumbnail track pull-left" href="{{ link }}" target="_blank">
+      <h2>{{ name }}</h2>
+      <div class="caption description">
+        <h5>{{ description }}</h5>
       </div>
     </a>
   </li>

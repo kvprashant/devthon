@@ -19,7 +19,7 @@ if (Meteor.isClient) {
   function equalResetHeight(group) {
     tallest = 0;
     group.each(function() {
-        thisHeight = $(this).height();       
+        thisHeight = $(this).height();
         if(thisHeight > tallest) {
             tallest = thisHeight;       
         }    
@@ -136,33 +136,39 @@ if (Meteor.isClient) {
 	   ]
   }
 
-  Template.discussions.events({
-    'click a.track': function(event) {
-      event.preventDefault();
-    }
-  });
-
   Template.discussions.tracks = function() {
     return [
        { 
-           "name" : "Web Hacks", 
-           "description" : "Hack around web using HTML5 or Python (Django, web2py, etc), \
-                            PHP (Codeigniter, Yii, Drupal, etc), Javascript (Node.js, meteorjs, etc) \
-                            or any other framework!",
-           "link" : "#"
+           "name" : "Spatial gesture sign language recognition", 
+           "description" : "Recognize basic sign language gestures using the \
+                            Leap Motion and translate the signs into text. Leap \
+                            Motion provides an SDK with Python, Java, Javascript, \
+                            other APIs",
+           "link" : "http://proposals.devthon.org",
        },
        {
-           "name" : "Mobile Hacks",
-           "description" : "Project ideas and hacks using mobile operating systems like \
-                            Android, iOS or the newest Firefox OS and mobile development frameworks \
-                            like Phonegap, Sencha, Kivy, etc",
-           "link": "#"
+           "name" : "Python Twisted CometD Server + Javascript Client",
+           "description" : "CometD is a scalable HTTP-based event routing bus that \
+                            uses a Ajax Push technology. The primary purpose of \
+                            Twisted CometD server + client is to implement responsive \
+                            user interactions for web clients.",
+           "link" : "http://proposals.devthon.org"
        },
        {
-           "name" : "Hardware hacks",
-           "description" : "Get involved in awesome hardware hacks using Leap Motion, \
-                            Arduino, Raspberry Pi or any hardware. You can get your own hardware too!",
-           "link" : "#"
+           "name" : "Symbol font for Indian states using HTML, CSS",
+           "description" : "Create a symbol font that makes it easy to create map of \
+                            India using HTML & CSS. This project makes the creators of \
+                            simple visualizations easier. Inspiration is drawn from \
+                            Intridea's Stately.",
+           "link" : "http://proposals.devthon.org"
+       },
+       {
+           "name" : "Know Your Bus",
+           "description" : "Based upon the source and destination areas selected, \
+                            the user will be displayed with all the buses in the \
+                            specific route along with the map. This application \
+                            definitely make the user easy to travel.",
+           "link" : "http://proposals.devthon.org"
        }
      ]
   }
@@ -250,11 +256,11 @@ if (Meteor.isClient) {
   }
 
   Template.discussions.rendered = function() {
-    equalResetHeight($(".thumbnail.track"));
+    equalResetHeight($("#hacks .thumbnails li .track"));
   }
 
   $(window).resize(function() {
-    equalResetHeight($(".thumbnails li"));
+    equalResetHeight($("#hacks .thumbnails li .track"));
   });
 
 }
