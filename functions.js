@@ -144,7 +144,7 @@ if (Meteor.isClient) {
                             Leap Motion and translate the signs into text. Leap \
                             Motion provides an SDK with Python, Java, Javascript, \
                             other APIs",
-           "link" : "http://proposals.devthon.org",
+           "link" : "http://proposals.devthon.org/proposal/s9iymKP9uT5hMS2AN",
        },
        {
            "name" : "Python Twisted CometD Server + Javascript Client",
@@ -152,7 +152,7 @@ if (Meteor.isClient) {
                             uses a Ajax Push technology. The primary purpose of \
                             Twisted CometD server + client is to implement responsive \
                             user interactions for web clients.",
-           "link" : "http://proposals.devthon.org"
+           "link" : "http://proposals.devthon.org/proposal/4awp5Atb3ZwmTN9LZ"
        },
        {
            "name" : "Symbol font for Indian states using HTML, CSS",
@@ -160,7 +160,7 @@ if (Meteor.isClient) {
                             India using HTML & CSS. This project makes the creators of \
                             simple visualizations easier. Inspiration is drawn from \
                             Intridea's Stately.",
-           "link" : "http://proposals.devthon.org"
+           "link" : "http://proposals.devthon.org/proposal/aSd7QADBrvjWRCmvv"
        },
        {
            "name" : "Know Your Bus",
@@ -168,7 +168,7 @@ if (Meteor.isClient) {
                             the user will be displayed with all the buses in the \
                             specific route along with the map. This application \
                             definitely make the user easy to travel.",
-           "link" : "http://proposals.devthon.org"
+           "link" : "http://proposals.devthon.org/proposal/PZCyvskZGFJvBeknE"
        }
      ]
   }
