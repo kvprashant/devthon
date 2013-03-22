@@ -249,8 +249,10 @@ if (Meteor.isClient) {
   Template.hackers.hackers = function() {
     return [
              { name: "Prajwala Manchikatla", imageUrl: "/hackers/prajwala.jpg", handle: "prajwala" },
+             { name: "Rakesh Reddy Dubbudu", imageUrl: "/hackers/rakesh.jpg", facebook: "dubbudu" },
              { name: "Kashyap KMBC", imageUrl: "/hackers/kgrz.jpg", handle: "kgrz" },
              { name: "Charan Puvvala", imageUrl: "/hackers/charan.jpg", handle: "f4k1r" },
+             { name: "Uday Bhaskar", imageUrl: "/hackers/uday.jpg", handle: "udayttt" },
              { name: "Ravi Teja", imageUrl: "/hackers/ravi.jpg", handle: "ravitheboss" },
              { name: "Sree Ram Kumar", imageUrl: "/hackers/sreeram.jpg", handle: "rrsrk" },
              { name: "Kiran Kumar Kyasa", imageUrl: "/hackers/kiran.jpg", handle: "kirankumarkyasa" },
