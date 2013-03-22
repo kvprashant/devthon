@@ -252,6 +252,8 @@ if (Meteor.isClient) {
              { name: "Kashyap KMBC", imageUrl: "/hackers/kgrz.jpg", handle: "kgrz" },
              { name: "Charan Puvvala", imageUrl: "/hackers/charan.jpg", handle: "f4k1r" },
              { name: "Ravi Teja", imageUrl: "/hackers/ravi.jpg", handle: "ravitheboss" },
+             { name: "Sree Ram Kumar", imageUrl: "/hackers/sreeram.jpg", handle: "rrsrk" },
+             { name: "Kiran Kumar Kyasa", imageUrl: "/hackers/kiran.jpg", handle: "kirankumarkyasa" },
     ]
   }
 
