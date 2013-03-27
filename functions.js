@@ -1,3 +1,5 @@
+Dummy = new Meteor.Collection("dummy");
+
 if (Meteor.isClient) {
 
   $('#navbar').affix();
@@ -252,10 +254,15 @@ if (Meteor.isClient) {
              { name: "Rakesh Reddy Dubbudu", imageUrl: "/hackers/rakesh.jpg", facebook: "dubbudu" },
              { name: "Kashyap KMBC", imageUrl: "/hackers/kgrz.jpg", handle: "kgrz" },
              { name: "Charan Puvvala", imageUrl: "/hackers/charan.jpg", handle: "f4k1r" },
+             { name: "Tulsi Dharmarajan", imageUrl: "/hackers/tulsi.jpg", handle: "tulsid" },
              { name: "Uday Bhaskar", imageUrl: "/hackers/uday.jpg", handle: "udayttt" },
              { name: "Ravi Teja", imageUrl: "/hackers/ravi.jpg", handle: "ravitheboss" },
              { name: "Sree Ram Kumar", imageUrl: "/hackers/sreeram.jpg", handle: "rrsrk" },
              { name: "Kiran Kumar Kyasa", imageUrl: "/hackers/kiran.jpg", handle: "kirankumarkyasa" },
+             { name: "Paresh Masade", imageUrl: "/hackers/paresh.jpg", facebook: "masade" },
+             { name: "Md. Abdurraafay", imageUrl: "/hackers/abdurraafay.jpg", handle: "abdurraafay" },
+             { name: "Tyson Penumala", imageUrl: "/hackers/tyson.jpg", facebook: "penumala.tyson" },
+             { name: "Vishal Chauhan", imageUrl: "/hackers/vishal.jpg", facebook: "vishal.chauhan.39" },
     ]
   }
 
