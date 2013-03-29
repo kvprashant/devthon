@@ -264,6 +264,7 @@ if (Meteor.isClient) {
              { name: "Tyson Penumala", imageUrl: "/hackers/tyson.jpg", facebook: "penumala.tyson" },
              { name: "Vishal Chauhan", imageUrl: "/hackers/vishal.jpg", facebook: "vishal.chauhan.39" },
              { name: "Sathish", imageUrl: "/hackers/sathish.jpg", handle: "vanensat" },
+             { name: "Aravind Baskaran", imageUrl: "/hackers/aravind.jpg", handle: "aravind_baskara" },
     ]
   }
 
