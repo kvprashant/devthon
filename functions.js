@@ -263,6 +263,7 @@ if (Meteor.isClient) {
              { name: "Md. Abdurraafay", imageUrl: "/hackers/abdurraafay.jpg", handle: "abdurraafay" },
              { name: "Tyson Penumala", imageUrl: "/hackers/tyson.jpg", facebook: "penumala.tyson" },
              { name: "Vishal Chauhan", imageUrl: "/hackers/vishal.jpg", facebook: "vishal.chauhan.39" },
+             { name: "Sathish", imageUrl: "/hackers/sathish.jpg", handle: "vanensat" },
     ]
   }
 
