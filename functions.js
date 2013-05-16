@@ -11,7 +11,7 @@ if (Meteor.isClient) {
   var curator = "us";
 
   // Default definitions. No need to change unless css is changed
-  var registerEnableClass = "btn-warning";
+  var registerEnableClass = "btn-danger";
   var registerDisableClass = "btn-disable";
 
   function resetHeight(group) {
@@ -41,7 +41,7 @@ if (Meteor.isClient) {
   } 
 
   Template.jumbotron.title = function() {
-    return "Devthon 0.1d";
+    return "Devthon 0.2";
   }
 
   Template.jumbotron.edition = function() {
@@ -52,12 +52,20 @@ if (Meteor.isClient) {
     return "Launchpad for ideas, code contributions and discussions";
   }
 
+  Template.actions.venueLink = function() {
+    return "http://goo.gl/maps/UIILE";
+  }
+
+  Template.actions.venue = function() {
+    return "Microsoft Accelerator"
+  }
+
   Template.actions.where = function() {
-    return "Hyderabad";
+    return "#9 Lavelle Road, Bangalore";
   }
 
   Template.actions.when = function() {
-    return "March 30-31";
+    return "June 8-9, 2013";
   }
 
   Template.actions.requestInviteText = function() {
@@ -65,7 +73,7 @@ if (Meteor.isClient) {
   }
 
   Template.actions.requestInviteLink = function() {
-    return "#register";
+    return "http://devthon.doattend.com";
   }
 
   Template.actions.proposalText = function() {
@@ -87,9 +95,7 @@ if (Meteor.isClient) {
   }
 
   Template.actions.subscribeHtml = function() {
-    var subscribeHtml = enableRegistrations ? "For updates, <a href='http://eepurl.com/vyCzb' target='_blank'>subscribe</a>" 
-                                         : "Meanwhile, <a href='http://eepurl.com/vyCzb' target='_blank'>subscribe</a> for updates or \
-					 <a href='http://proposals.devthon.org' target='_blank'>propose a hack</a>.";
+    var subscribeHtml = enableRegistrations ? "You may also <a href='http://proposals.devthon.org'>propose your own hack</a>!" : "";
     return subscribeHtml;
   }
 
@@ -128,51 +134,14 @@ if (Meteor.isClient) {
 
   Template.navigation.navs = function() {
     return [
-            { "text": "Proposals", "link": "http://proposals.devthon.org" }, 
-            { "text": "About", "link": "#about", modal: true }, 
-            { "text": "Hackers", "link": "#hackers" }, 
-            { "text": "Schedule", "link": "#schedule" }, 
-            { "text": "Sponsors", "link": "#sponsors" }, 
-            { "text": "Venue", "link": "#venue" }, 
-	    { "text": "Blog", "link": "http://blog.devthon.org", blank: true },
+          { "text": "0.1", "link": "http://blog.devthon.org/post/47689152810/event-report-hyderabad-march-30-31" }, 
+          { "text": "Proposals", "link": "http://proposals.devthon.org" }, 
+          { "text": "Blog", "link": "http://blog.devthon.org", blank: true },
+          { "text": "About", "link": "#about", modal: true }, 
+          { "text": "Schedule", "link": "#schedule" }, 
+          { "text": "Sponsors", "link": "#sponsors" }, 
+          { "text": "Why?", "link": "http://blog.devthon.org/post/44214309416/why-devthon" }, 
 	   ]
-  }
-
-  Template.discussions.tracks = function() {
-    return [
-       { 
-           "name" : "Spatial gesture sign language recognition", 
-           "description" : "Recognize basic sign language gestures using the \
-                            Leap Motion and translate the signs into text. Leap \
-                            Motion provides an SDK with Python, Java, Javascript, \
-                            other APIs",
-           "link" : "http://proposals.devthon.org/proposal/s9iymKP9uT5hMS2AN",
-       },
-       {
-           "name" : "Python Twisted CometD Server + Javascript Client",
-           "description" : "CometD is a scalable HTTP-based event routing bus that \
-                            uses a Ajax Push technology. The primary purpose of \
-                            Twisted CometD server + client is to implement responsive \
-                            user interactions for web clients.",
-           "link" : "http://proposals.devthon.org/proposal/4awp5Atb3ZwmTN9LZ"
-       },
-       {
-           "name" : "Symbol font for Indian states using HTML, CSS",
-           "description" : "Create a symbol font that makes it easy to create map of \
-                            India using HTML & CSS. This project makes the creators of \
-                            simple visualizations easier. Inspiration is drawn from \
-                            Intridea's Stately.",
-           "link" : "http://proposals.devthon.org/proposal/aSd7QADBrvjWRCmvv"
-       },
-       {
-           "name" : "Know Your Bus",
-           "description" : "Based upon the source and destination areas selected, \
-                            the user will be displayed with all the buses in the \
-                            specific route along with the map. This application \
-                            definitely make the user easy to travel.",
-           "link" : "http://proposals.devthon.org/proposal/PZCyvskZGFJvBeknE"
-       }
-     ]
   }
 
   Template.setup.created = function() {
@@ -241,30 +210,12 @@ if (Meteor.isClient) {
 
   Template.sponsors.sponsors = function() {
     return [
-             { link: "http://mowbly.com", imageUrl: "/sponsors/_mowbly.png", style: "cloudpact" },
-             { link: "http://mozilla.org", imageUrl: "/sponsors/mozilla_wordmark.png", style: "mozilla" },
-             { link: "http://azrisolutions.com", imageUrl: "/sponsors/azri.png", style: "azri" },
-             { link: "http://handsmedia.in", imageUrl: "/sponsors/hands.png", style: "hands" },
+             
     ]
   }
 
   Template.hackers.hackers = function() {
     return [
-             { name: "Prajwala Manchikatla", imageUrl: "/hackers/prajwala.jpg", handle: "prajwala" },
-             { name: "Rakesh Reddy Dubbudu", imageUrl: "/hackers/rakesh.jpg", facebook: "dubbudu" },
-             { name: "Kashyap KMBC", imageUrl: "/hackers/kgrz.jpg", handle: "kgrz" },
-             { name: "Charan Puvvala", imageUrl: "/hackers/charan.jpg", handle: "f4k1r" },
-             { name: "Tulsi Dharmarajan", imageUrl: "/hackers/tulsi.jpg", handle: "tulsid" },
-             { name: "Uday Bhaskar", imageUrl: "/hackers/uday.jpg", handle: "udayttt" },
-             { name: "Ravi Teja", imageUrl: "/hackers/ravi.jpg", handle: "ravitheboss" },
-             { name: "Sree Ram Kumar", imageUrl: "/hackers/sreeram.jpg", handle: "rrsrk" },
-             { name: "Kiran Kumar Kyasa", imageUrl: "/hackers/kiran.jpg", handle: "kirankumarkyasa" },
-             { name: "Paresh Masade", imageUrl: "/hackers/paresh.jpg", facebook: "masade" },
-             { name: "Md. Abdurraafay", imageUrl: "/hackers/abdurraafay.jpg", handle: "abdurraafay" },
-             { name: "Tyson Penumala", imageUrl: "/hackers/tyson.jpg", facebook: "penumala.tyson" },
-             { name: "Vishal Chauhan", imageUrl: "/hackers/vishal.jpg", facebook: "vishal.chauhan.39" },
-             { name: "Sathish", imageUrl: "/hackers/sathish.jpg", handle: "vanensat" },
-             { name: "Aravind Baskaran", imageUrl: "/hackers/aravind.jpg", handle: "aravind_baskara" },
     ]
   }
 

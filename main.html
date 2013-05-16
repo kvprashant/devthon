@@ -1,5 +1,5 @@
 <head>
-  <title>Devthon - Launchpad for ideas, code contributions and discussions</title>
+  <title>Devthon 0.2 - Launchpad for ideas, code contributions and discussions</title>
   <meta property="og:title" content="Devthon"/>
   <meta property="og:type" content="hackathon"/>
   <meta property="og:url" content="http://devthon.org"/>
@@ -54,30 +54,9 @@
         {{> actions}}
       </div>
 
-      <div id="hackers" class="row">
-        <h2 class="section-heading">Hackers</h2>
-        {{> hackers}}
-      </div>
-
       <div id="schedule" class="row">
         <h2 class="section-heading schedule">Schedule</h2>
         {{> schedule}}
-      </div>
-
-      <div id="sponsors" class="row">
-        <h2 class="section-heading sponsors">Sponsors</h2>
-        {{> sponsors}}
-      </div>
-
-      <div id="venue" class="row-fluid">
-        <h2 class="section-heading">Venue</h2>
-	<h3>
-		Hackspace, 3rd floor, Beside Electric Substation,
-		Near YSR statue, 100 Feet Road, Ayyappa Society Layout, 
-		Madhapur, Hyderabad
-	</h3>
-        {{> venue }}
-        {{> map}}
       </div>
 
       {{> footer}}
@@ -96,40 +75,21 @@
 <template name="actions">
   <div class="actionables">
 
-    <h4>{{ where }}, {{ when }}</h4>
+    <h4><a href="{{ venueLink }}" target="_blank"><i class="icon-map-marker"></i>{{ venue }}, {{where}}</a></h4>
+    <h4>{{ when }}</h4>
 
-    <a href="{{ requestInviteLink }}" data-toggle="modal" 
+    <a href="{{ requestInviteLink }}" 
        class="btn btn-primary {{ buttonClass }} btn-register">
       <p>{{ requestInviteText }}</p>
-    </a>
-    <a href="http://proposals.devthon.org" target="_blank" data-toggle="modal" 
-       class="btn btn-primary btn-success btn-register">
-      <p>Propose Hack</p>
     </a>
 
     <div class="invited row-fluid">
      <p>
-       {{#if isRegistrationOpen }}
-         {{> register}}
          {{ ticketText }}
-       {{else}}
-         {{ ticketText }}
-       {{/if}}
-       {{{ subscribeHtml }}}
+         {{{ subscribeHtml }}}
      </p>
     </div>
   </div>
-</template>
-
-<template name="map">
- <iframe id="gmaps" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
-   src="https://maps.google.com/maps?q=17.451,78.393397&amp;num=1&amp;ie=UTF8&amp;t=m&amp;z=14&amp;ll=17.451312,78.393454&amp;output=embed">
- </iframe><br />
- <small>
- <a href="https://maps.google.com/maps?q=17.451,78.393397&amp;num=1&amp;ie=UTF8&amp;t=m&amp;z=14&amp;ll=17.451312,78.393454&amp;output=embed">
-   View Larger Map
- </a>
- </small>
 </template>
 
 <template name="discussions">
@@ -191,6 +151,7 @@
       {{/each}}
     </ul>
   </div>
+  <a></a>
 </template>
 
 <template name="sponsor">
