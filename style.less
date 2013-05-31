@@ -31,8 +31,16 @@
   margin-left: 10px;
 }
 
+[class*="span"].first {
+  margin-left: 0;
+}
+
 .row-fluid {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.lead {
+  margin-bottom: 0px;
 }
 
 /* CSS */
@@ -176,6 +184,10 @@ body {
   margin: 0 auto;
   text-align: center;
 
+  .map-maker {
+    margin: 4px;
+  }
+
   h4 {
     font-weight: 500;
     font-size: 18px;
@@ -259,6 +271,10 @@ h2 {
     &.thumbnails {
       margin: 0 auto;
       text-align: center;
+      display: block;
+      padding: 0;
+      width: 80%;
+      list-style: none outside none;
 
       &.people {
         text-align: left;
@@ -397,7 +413,7 @@ a {
       .box;
 
       img {
-        max-height: 105px;
+        max-height: 150px;
         padding: 20px 0;
       }
     }

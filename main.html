@@ -1,5 +1,5 @@
 <head>
-  <title>Devthon 0.2 - Launchpad for ideas, code contributions and discussions</title>
+  <title>Devthon - Launchpad for ideas, code contributions and discussions</title>
   <meta property="og:title" content="Devthon"/>
   <meta property="og:type" content="hackathon"/>
   <meta property="og:url" content="http://devthon.org"/>
@@ -41,7 +41,7 @@
 </body>
 
 <template name="main">
-
+<img src="/logo_featured_expalara.png">
       {{> jumbotron}}
       {{> about }}
       {{> faq }}
@@ -52,6 +52,15 @@
 
       <div class="row-fluid">
         {{> actions}}
+      </div>
+
+      <div id="cities" class="row">
+        {{> cities}}
+      </div>
+
+      <div id="sponsors" class="row">
+        <h2 class="section-heading sponsors">Sponsors</h2>
+        {{> sponsors}}
       </div>
 
       <div id="schedule" class="row">
@@ -75,7 +84,7 @@
 <template name="actions">
   <div class="actionables">
 
-    <h4><a href="{{ venueLink }}" target="_blank"><i class="icon-map-marker"></i>{{ venue }}, {{where}}</a></h4>
+    <h4><a href="{{ venueLink }}" target="_blank"><i class="map-maker icon-map-marker"></i>{{ venue }}, {{where}}</a></h4>
     <h4>{{ when }}</h4>
 
     <a href="{{ requestInviteLink }}" 
@@ -133,6 +142,12 @@
 
 <template name="navigation">
   <ul class="nav">
+    <li class="dropdown">
+      <a href="#" data-toggle="dropdown" role="button" id="drop4" class="dropdown-toggle">Previous <b class="caret"></b></a>
+      <ul aria-labelledby="drop4" role="menu" class="dropdown-menu" id="menu1">
+        <li role="presentation"><a href="http://j.mp/devthonb1" target="_blank" tabindex="-1" role="menuitem">0.1</a></li>
+      </ul>
+    </li>
     {{#each navs}}
       {{> nav}}
     {{/each}}
@@ -155,7 +170,7 @@
 </template>
 
 <template name="sponsor">
-  <li class="span4">
+  <li class="span4 {{#if first}}first{{/if}}">
     <a class="thumbnail sponsor" href="{{ link }}" target="_blank">
       <img src="{{ imageUrl }}">
     </a>

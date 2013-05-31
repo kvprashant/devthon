@@ -41,7 +41,7 @@ if (Meteor.isClient) {
   } 
 
   Template.jumbotron.title = function() {
-    return "Devthon 0.2";
+    return "Devthon";
   }
 
   Template.jumbotron.edition = function() {
@@ -134,7 +134,6 @@ if (Meteor.isClient) {
 
   Template.navigation.navs = function() {
     return [
-          { "text": "0.1", "link": "http://blog.devthon.org/post/47689152810/event-report-hyderabad-march-30-31" }, 
           { "text": "Proposals", "link": "http://proposals.devthon.org" }, 
           { "text": "Blog", "link": "http://blog.devthon.org", blank: true },
           { "text": "About", "link": "#about", modal: true }, 
@@ -210,7 +209,7 @@ if (Meteor.isClient) {
 
   Template.sponsors.sponsors = function() {
     return [
-             
+            { link: "http://mowbly.com", imageUrl: "/sponsors/blr/_mowbly.png", style: "cloudpact", first: true},
     ]
   }
 
