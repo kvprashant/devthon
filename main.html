@@ -63,6 +63,11 @@
         {{> sponsors}}
       </div>
 
+      <div id="partners" class="row">
+        <h2 class="section-heading partners">Community Partners</h2>
+        {{> partners}}
+      </div>
+
       <div id="schedule" class="row">
         <h2 class="section-heading schedule">Schedule</h2>
         {{> schedule}}
@@ -158,6 +163,25 @@
   <li><a href="{{ link }}" {{#if blank}} target="_blank" {{/if}} {{#if modal}} data-toggle="modal"{{/if}}>{{ text }}</a></li>
 </template>
 
+<template name="partners">
+  <div class="section">
+    <ul class="thumbnails">
+      {{#each partners}}
+        {{> partner }}
+      {{/each}}
+    </ul>
+  </div>
+  <a></a>
+</template>
+
+<template name="partner">
+  <li class="span2 {{#if first}}first{{/if}}">
+    <a class="thumbnail partner" href="{{ link }}" target="_blank">
+      <img src="{{ imageUrl }}">
+    </a>
+  </li>
+</template>
+
 <template name="sponsors">
   <div class="section">
     <ul class="thumbnails">
@@ -170,7 +194,7 @@
 </template>
 
 <template name="sponsor">
-  <li class="span2 {{#if first}}first{{/if}}">
+  <li class="span4 {{#if first}}first{{/if}}">
     <a class="thumbnail sponsor" href="{{ link }}" target="_blank">
       <img src="{{ imageUrl }}">
     </a>
