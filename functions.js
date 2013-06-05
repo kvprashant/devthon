@@ -210,6 +210,7 @@ if (Meteor.isClient) {
   Template.sponsors.sponsors = function() {
     return [
             { link: "http://mowbly.com", imageUrl: "/sponsors/blr/_mowbly.png", style: "cloudpact", first: true},
+            { imageUrl: "/sponsors/blr/azri.png", style: "azri", has_link: false},
     ]
   }
 
@@ -217,6 +218,7 @@ if (Meteor.isClient) {
     return [
             { link: "http://bdotnet.in", imageUrl: "/sponsors/blr/bdotnet.png", style: "bdotnet"},
             { link: "http://venturehire.in", imageUrl: "/sponsors/blr/vh.png", style: "venturehire"},
+            { link: "https://developers.google.com", imageUrl: "/sponsors/blr/gdgblr.png", style: "gdgblr"},
     ]
   }
 

@@ -121,7 +121,7 @@
 
 <template name="trackbox">
   <li class="span5 pull-left">
-    <a class="thumbnail track pull-left" href="{{ link }}" target="_blank">
+  <a class="thumbnail track pull-left" {{#if has_link}}href="{{ link }}" target="_blank"{{/if}}>
       <h2>{{ name }}</h2>
       <div class="caption description">
         <h5>{{ description }}</h5>
@@ -194,7 +194,7 @@
 </template>
 
 <template name="sponsor">
-  <li class="span4 {{#if first}}first{{/if}}">
+  <li class="span3 {{#if first}}first{{/if}}">
     <a class="thumbnail sponsor" href="{{ link }}" target="_blank">
       <img src="{{ imageUrl }}">
     </a>
