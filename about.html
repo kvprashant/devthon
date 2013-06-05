@@ -12,17 +12,23 @@
         <h3 class="modal-heading">Team</h3>
       </div>
       <div class="team">
-        <ul class="thumbnails">
-          <li class="span2">
-            <div class="thumbnail person" target="_blank">
-             <img src="prashant.jpg">
-             {{> prashant}}
-            </div>
-          </li>
-          <li class="span2">
+        <ul class="thumbnails team">
+          <li class="span2 profile">
             <div class="thumbnail person" target="_blank">
              <a href="http://about.me/harish.krishnan"><img src="harish.jpg"></a>
 	     <a href="http://about.me/harish.krishnan"><img class="aboutme" src="aboutme_button.png"></a>
+            </div>
+          </li>
+          <li class="span2 profile">
+            <div class="thumbnail person" target="_blank">
+             <a href="http://about.me/goteti"><img src="venky.jpg"></a>
+       <a href="http://about.me/goteti"><img class="aboutme" src="aboutme_button.png"></a>
+            </div>
+          </li>
+          <li class="span2 profile">
+            <div class="thumbnail person" target="_blank">
+             <img src="prashant.jpg">
+             {{> prashant}}
             </div>
           </li>
         </ul>
@@ -40,7 +46,7 @@
 <template name="prashant">
   <a href="https://twitter.com/prashantkv" 
      class="twitter-follow-button" 
-     data-show-count="false">Follow @prashantkv</a>
+     data-show-count="false">@prashantkv</a>
 </template>
 
 <template name="harish">
