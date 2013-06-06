@@ -218,7 +218,7 @@ if (Meteor.isClient) {
     return [
             { link: "http://bdotnet.in", imageUrl: "/sponsors/blr/bdotnet.png", style: "bdotnet"},
             { link: "http://venturehire.in", imageUrl: "/sponsors/blr/vh.png", style: "venturehire"},
-            { link: "https://developers.google.com", imageUrl: "/sponsors/blr/gdgblr.png", style: "gdgblr"},
+            { link: "https://developers.google.com/groups/chapter/104550553343399000979/", imageUrl: "/sponsors/blr/gdgblr.png", style: "gdgblr"},
     ]
   }
 
