@@ -1,5 +1,5 @@
 <head>
-  <title>Devthon - Launchpad for ideas, code contributions and discussions</title>
+  <title>Devthon - Launchpad for innovation and exploration</title>
   <meta property="og:title" content="Devthon"/>
   <meta property="og:type" content="hackathon"/>
   <meta property="og:url" content="http://devthon.org"/>
@@ -7,7 +7,7 @@
   <meta property="og:site_name" content="Devthon"/>
   <meta property="og:description"
           content="Launchpad for ideas, code contributions and discussions"/>
-  <link href='http://fonts.googleapis.com/css?family=Montaga|Sintony' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Montaga|Sintony|Roboto+Condensed' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
             <span class="icon-bar"></span>
           </button>
           <div class="nav-collapse collapse">
-	    {{> navigation }}
+            {{> navigation }}
           </div><!--/.nav-collapse -->
 
           <div class="social-share">
@@ -54,28 +54,18 @@
         {{> actions}}
       </div>
 
-      <div id="cities" class="row">
-        {{> cities}}
-      </div>
-
-      <div id="hacks" class="row">
-        <h2 class="section-heading hacks">Proposals</h2>
-        {{> hacks}}
-      </div>
-
-      <div id="sponsors" class="row">
-        <h2 class="section-heading sponsors">Sponsors</h2>
-        {{> sponsors}}
-      </div>
-
-      <div id="partners" class="row">
-        <h2 class="section-heading partners">Community Partners</h2>
-        {{> partners}}
+      <div id="proposals" class="row">
+        <h2 class="section-heading proposals">Proposals</h2>
+        {{> proposals3}}
       </div>
 
       <div id="schedule" class="row">
         <h2 class="section-heading schedule">Schedule</h2>
-        {{> schedule}}
+        {{> schedule3}}
+      </div>
+
+      <div id="cities" class="row">
+        {{> cities}}
       </div>
 
       {{> footer}}
@@ -86,7 +76,7 @@
 
 <template name="jumbotron">
   <div class="jumbotron">
-    <h1>{{ title }}</h1>
+    <a href="/"><h1>{{ title }}</h1></a>
     <p class="lead">{{ tagline }}</p>
   </div>
 </template>
@@ -94,20 +84,13 @@
 <template name="actions">
   <div class="actionables">
 
-    <h4><a href="{{ venueLink }}" target="_blank"><i class="map-maker icon-map-marker"></i>{{ venue }}, {{where}}</a></h4>
-    <h4>{{ when }}</h4>
+    <h5><a href="{{ venueLink }}" target="_blank"><i class="map-maker icon-map-marker"></i>{{ venue }}, {{where}}</a></h5>
+    <h5>{{ when }}</h5>
 
     <a href="{{ requestInviteLink }}" 
        class="btn btn-primary {{ buttonClass }} btn-register">
       <p>{{ requestInviteText }}</p>
     </a>
-
-    <div class="invited row-fluid">
-     <p>
-         {{ ticketText }}
-         {{{ subscribeHtml }}}
-     </p>
-    </div>
   </div>
 </template>
 
@@ -156,6 +139,7 @@
       <a href="#" data-toggle="dropdown" role="button" id="drop4" class="dropdown-toggle">Previous <b class="caret"></b></a>
       <ul aria-labelledby="drop4" role="menu" class="dropdown-menu" id="menu1">
         <li role="presentation"><a href="http://j.mp/devthonb1" target="_blank" tabindex="-1" role="menuitem">0.1</a></li>
+        <li role="presentation"><a href="http://j.mp/devthonb2" target="_blank" tabindex="-1" role="menuitem">0.2</a></li>
       </ul>
     </li>
     {{#each navs}}

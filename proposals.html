@@ -1,0 +1,21 @@
+<template name="proposals3">
+  <div class="tracks">
+    <ul class="thumbnails">
+      {{#each tracks}}
+        {{> proposalset }}
+      {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="proposalset">
+  <li class="span3 session">
+    <div class="thumbnail pull-left">
+    	<a href="{{ link }}" target="_blank">
+    		<div class="discussion pull-left">
+    			<h3>{{ title }}</h3>
+    		</div>
+    	</a>
+    </div>
+  </li>
+</template>

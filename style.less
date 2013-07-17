@@ -110,10 +110,10 @@ body {
 
 .content {
   font-family: @font1, @family;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   line-height: 1.3em;
-  margin: 0 20%;
+  margin: 0 18%;
 }
 
 /* Social CSS */
@@ -158,7 +158,7 @@ body {
   margin-top: 4em;
 
   h1 {
-    font-size: 42px;
+    font-size: 34px;
     line-height: 1;
     letter-spacing: -1px;
     margin: 0 0 22px 0;
@@ -171,7 +171,7 @@ body {
   }
 
   p {
-    font-size: 28px;
+    font-size: 22px;
     line-height: 1.1em;
     &.when {
       font-size: 21px;
@@ -192,6 +192,12 @@ body {
     font-weight: 500;
     font-size: 18px;
     margin: 0 0 22px 0;
+  }
+
+  h5 {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 10px 0;
   }
 
   p {
@@ -495,4 +501,76 @@ iframe {
 
 .table tbody td {
   text-align: left;  
+}
+
+
+.session {
+
+  .prehover {
+    color: #000000;
+  }
+
+  .thumbnail {
+    min-width: 100%;
+    padding: 18px;
+    word-wrap: break-word;
+    background-color: #f0f0f0;
+
+    .discussion {
+      h3 {
+        font-family: "Montaga","Helvetica Neue",Helvetica,Arial,sans-serif;
+        line-height: 1.4em;
+        text-align: left;
+        font-size: 14px;
+        margin: 12px 0;
+      }
+    }
+
+    p {
+      color: #000000;
+    }
+
+    &.selected {
+      color: #005580;
+      border-color: #0088cc;
+      background-color: #F6F6F6;
+      text-decoration: none;
+      -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+      -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+      box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+    }
+
+    .join-action {
+      margin-left: 50%;
+    }
+
+    .discussion {
+      min-height: 6em;
+    }
+
+    .description {
+      min-height: 9em;
+      border-bottom: 1px solid #D2D2D2;
+      padding-bottom: 0em;
+      line-height: 1.4em;
+    }
+
+    .proposer {
+      padding-top: 0.5em;
+    }
+
+    .tweet-share {
+      padding-top: 2px;
+    }
+
+    .joined {
+      padding-top: 5px;
+    }
+
+    &:hover {
+      cursor: default;
+      background-color: #F6F6F6;
+      text-decoration: none;
+    }
+  }
 }

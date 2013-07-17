@@ -49,23 +49,23 @@ if (Meteor.isClient) {
   }
 
   Template.jumbotron.tagline = function() {
-    return "Launchpad for ideas, code contributions and discussions";
+    return "Launchpad for innovation and exploration";
   }
 
   Template.actions.venueLink = function() {
-    return "http://goo.gl/maps/UIILE";
+    return "http://goo.gl/maps/rxkmZ";
   }
 
   Template.actions.venue = function() {
-    return "Microsoft Accelerator"
+    return "Progress Software"
   }
 
   Template.actions.where = function() {
-    return "#9 Lavelle Road, Bangalore";
+    return "#18, 4th Floor, iLAB's Centre, Madhapur";
   }
 
   Template.actions.when = function() {
-    return "June 8-9, 2013";
+    return "August 10-11, 2013";
   }
 
   Template.actions.requestInviteText = function() {
@@ -73,7 +73,7 @@ if (Meteor.isClient) {
   }
 
   Template.actions.requestInviteLink = function() {
-    return "http://devthon.doattend.com";
+    return "http://devthonhyd.doattend.com";
   }
 
   Template.actions.proposalText = function() {
@@ -81,7 +81,7 @@ if (Meteor.isClient) {
   }
 
   Template.actions.proposalLink = function() {
-    return "http://proposals.devthon.org";
+    return "https://groups.google.com/forum/?fromgroups#!forum/devthon";
   }
 
   Template.actions.ticketLink = function() {
@@ -95,7 +95,7 @@ if (Meteor.isClient) {
   }
 
   Template.actions.subscribeHtml = function() {
-    var subscribeHtml = enableRegistrations ? "You may also <a href='http://proposals.devthon.org'>propose your own hack</a>!" : "";
+    var subscribeHtml = enableRegistrations ? "You may also <a href='https://groups.google.com/forum/?fromgroups#!forum/devthon'>propose your own hack</a>!" : "";
     return subscribeHtml;
   }
 
@@ -107,9 +107,8 @@ if (Meteor.isClient) {
   Template.actions.isRegistrationOpen = enableRegistrations;
 
   Template.about.content = function() {
-    return "Meet curious and tinkering minds and spend a weekend sparking new product ideas, \
-	    open source code contributions or hacking hardware. You could even hack \
-	    on furniture or food too. We want to encourage this culture through Devthon."
+    return "Meet curious and tinkering minds and spend a weekend sparking new ideas, \
+    work on existing hacks or explore what you always wanted to work on"
   }
 
   Template.about.mission = function() {
@@ -124,8 +123,8 @@ if (Meteor.isClient) {
   }
 
   Template.details.content = function() {
-    return "Meet curious and tinkering minds and spend a weekend sparking new product ideas, \
-	    open source code contributions or hacking hardware.";
+    return "Meet curious and tinkering minds and spend a weekend sparking new ideas, \
+    work on existing hacks or explore photography/film-making, anything that you love!";
   }
 
   Template.footer.copyright = function() {
@@ -134,7 +133,7 @@ if (Meteor.isClient) {
 
   Template.navigation.navs = function() {
     return [
-          { "text": "Proposals", "link": "http://proposals.devthon.org" }, 
+          { "text": "Proposals", "link": "https://groups.google.com/forum/?fromgroups#!forum/devthon" }, 
           { "text": "Blog", "link": "http://blog.devthon.org", blank: true },
           { "text": "About", "link": "#about", modal: true }, 
           { "text": "Schedule", "link": "#schedule" }, 
